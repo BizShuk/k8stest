@@ -13,7 +13,7 @@ nodes:
       kind: InitConfiguration
       nodeRegistration:
         kubeletExtraArgs:
-          node-labels: "ingress-ready=true"
+          node-labels: "ingress-ready=true" # node affinity for ingress-nginx controll sample
     # extraPortMappings:      # for windows/mac
     #   - containerPort: 80
     #     hostPort: 80
