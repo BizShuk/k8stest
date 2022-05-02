@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ginsample
+  labels:
+    app: ginsample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ginsample
+  template:
+    metadata:
+      labels:
+        app: ginsample
+    spec:
+      containers:
+      - name: ginsample
+        image: bizshuk/ginsample:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
